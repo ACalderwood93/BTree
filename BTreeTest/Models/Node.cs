@@ -62,11 +62,11 @@ namespace BTreeTest.Models
 
             if (key < this.Key)
             {
-                result = this.LeftNode.Search(key);
+                result = this.LeftNode?.Search(key);
             }
             else
             {
-                result = this.RightNode.Search(key);
+                result = this.RightNode?.Search(key);
             }
 
             return result;
