@@ -10,5 +10,18 @@ namespace BTreeTest.Models
     {
         public Node RootNode { get; set; }
 
+        public Tree()
+        {
+            RootNode = new Node(0, null);
+        }
+        public Node InsertNode(int key)
+        {
+            this.RootNode.Add(key);
+            return new Node();
+        }
+        public Node Search(int key)
+        {
+           return this.RootNode.Search(key);
+        }
     }
 }
