@@ -11,14 +11,19 @@ namespace BTreeTest
     {
         static void Main(string[] args)
         {
+            
             Tree SearchTree = new Tree();
+            var rand = new Random();
+            for (int i = 0; i < 1000; i++)
+            {
 
-            SearchTree.InsertNode(14);
-            SearchTree.InsertNode(12);
-            SearchTree.InsertNode(16);
+                int randomNumber = rand.Next(0, 1000);
+                SearchTree.InsertNode(randomNumber);
+            }
 
+           
 
-            SearchTree.Search(12);
+            SearchTree.MapTree();
         }
     }
 }

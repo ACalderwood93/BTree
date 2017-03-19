@@ -12,7 +12,7 @@ namespace BTreeTest.Models
 
         public Tree()
         {
-            RootNode = new Node(0, null);
+            RootNode = new Node(500);
         }
         public Node InsertNode(int key)
         {
@@ -21,7 +21,13 @@ namespace BTreeTest.Models
         }
         public Node Search(int key)
         {
-           return this.RootNode.Search(key);
+            return this.RootNode.Search(key);
+        }
+        public void MapTree()
+        {
+            RootNode.PrintPretty("", Node.NodePosition.center, true, false);
+
+
         }
     }
 }
